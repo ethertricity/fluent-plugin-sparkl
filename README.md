@@ -72,6 +72,13 @@ This plugin is v0.14 of fluentd compatible only.
 
 `fluent-gem install fluent-plugin-sparkl-0.1.0.gem`
 
+## Testing
+
+Insert Blockcypher token into two places in test/plugin/test_filter_sparkl.rb, replacing `{{ coinnet_token }}`.
+
+Then, `rake test`, with RUBYLIB environment variable set appropriately, e.g.:
+`export RUBYLIB=$(find /opt/td-agent/embedded/lib/ruby/gems/2.4.0/gems -name "lib" -printf "%p:")`
+
 ## Configuration
 1. Simple chaining of events - no pushing to public chain.
 ```
